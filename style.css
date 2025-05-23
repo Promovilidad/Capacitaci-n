@@ -1,0 +1,222 @@
+/* ===== Estilo general ===== */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+}
+
+/* ===== Imagen de bienvenida ===== */
+.hero-container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.hero-image-full {
+  width: 100vw;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* ===== Secciones ===== */
+.full-section {
+  width: 100vw;
+  padding: 40px 6vw; /* Reducido para dejar espacio a las imágenes flotantes */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  position: relative; /* Necesario para que las imágenes flotantes se posicionen bien */
+}
+
+/* ===== Texto institucional ===== */
+.full-section h5 {
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.full-section p {
+  font-size: 1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Tarjetas de curso ===== */
+.course-card {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0,0,0,0.1);
+  background-color: #fff;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Imagen dentro de cada curso */
+.course-img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* ===== Botones personalizados ===== */
+.btn-registrar {
+  background-color: #dc3545;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-registrar:hover {
+  background-color: #c82333;
+}
+
+.btn-ingresar {
+  background-color: #28a745;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ingresar:hover {
+  background-color: #218838;
+}
+
+/* ===== Pie de página ===== */
+.footer {
+  background-color: #1d2530;
+  color: #ffffff;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  margin-top: 60px;
+}
+
+.footer h6 {
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.footer p,
+.footer a {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0;
+}
+
+.footer a.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.footer ul {
+  padding-left: 0;
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer hr {
+  border-color: #444;
+}
+
+/* ===== Animación scroll reveal ===== */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.scroll-reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Imágenes flotantes a la derecha (actualizado y grande) ===== */
+.floating-images-container {
+  position: absolute;
+  right: 5vw; /* Antes 0 */
+  top: 0;
+  width: 300px; /* Más ancho */
+  height: 900px; /* Más alto */
+  overflow: hidden;
+  z-index: 1;
+}
+
+.floating-images-track {
+  display: flex;
+  flex-direction: column;
+  animation: scrollUp 24s linear infinite;
+}
+
+.floating-images-track img {
+  width: 100%;
+  height: 220px; /* Más alto */
+  margin-bottom: 25px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Animación vertical infinita */
+@keyframes scrollUp {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-65%);
+  }
+}
+
+/* ===== Responsivo (ocultar imágenes flotantes en móviles) ===== */
+@media (max-width: 768px) {
+  .floating-images-container {
+    display: none;
+  }
+
+  .course-card {
+    width: 100%;
+  }
+}
+/* ===== Slider vertical de una sola columna ===== */
+.slider-single-column {
+  height: 600px; /* AUMENTADO */
+  overflow: hidden;
+  position: relative;
+  background-color: #fff; /* asegúrate de que tenga fondo blanco */
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+
+#slider-home {
+  animation: slideVertical 12s linear infinite;
+}
+
+#slider-home:hover {
+  animation-play-state: paused;
+}
+
+#slider-home li {
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+#slider-home img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+@keyframes slideVertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}

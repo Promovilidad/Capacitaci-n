@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aula Virtual PROMOVILIDAD</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      font-family: Arial, sans-serif;
+    }
+
+    .hero-container {
+      width: 100vw;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .hero-image-full {
+      width: 100vw;
+      height: auto;
+      display: block;
+      border-radius: 0;
+    }
+
+    .full-section {
+      width: 100vw;
+      padding: 40px 10vw;
+      box-sizing: border-box;
+      background-color: #ffffff;
+      position: relative;
+    }
+
+    .full-section h5 {
+      margin-bottom: 1rem;
+      color: #000;
+    }
+
+    .full-section p {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+
+    .course-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+      padding: 20px;
+      max-width: 90vw;
+    }
+
+    .course-img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .btn-registrar {
+      background-color: #dc3545;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-registrar:hover {
+      background-color: #c82333;
+    }
+
+    .btn-ingresar {
+      background-color: #28a745;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-ingresar:hover {
+      background-color: #218838;
+    }
+
+    .footer {
+      background-color: #1d2530;
+      color: #ffffff;
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+      margin-top: 60px;
+    }
+
+    .footer h6 {
+      font-weight: bold;
+      color: #ffffff;
+      margin-bottom: 1rem;
+    }
+
+    .footer p, .footer a {
+      font-size: 0.95rem;
+      color: #ccc;
+      margin: 0;
+    }
+
+    .footer a.footer-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .footer ul {
+      padding-left: 0;
+    }
+
+    .footer ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer hr {
+      border-color: #444;
+    }
+
+    .scroll-reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .scroll-reveal.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==== IMÁGENES FLOTANTES A LA DERECHA ==== */
+    .floating-images-container {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 150px;
+      height: 500px;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .floating-images-track {
+      display: flex;
+      flex-direction: column;
+      animation: scrollUp 18s linear infinite;
+    }
+
+    .floating-images-track img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+      object-fit: cover;
+    }
+
+    @keyframes scrollUp {
+      0% {
+        transform: translateY(0%);
+      }
+      100% {
+        transform: translateY(-50%);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Imagen de bienvenida -->
+  <div class="hero-container scroll-reveal">
+    <img src="imagen-bienvenida.jpg" class="hero-image-full" alt="Bienvenida al Aula Virtual de PROMOVILIDAD" />
+  </div>
+
+  <!-- Texto institucional -->
+  <section class="full-section scroll-reveal">
+    <h5><strong>Programa Nacional de Transporte Urbano Sostenible</strong></h5>
+    <p>
+      PROMOVILIDAD es un programa nacional en el ámbito del Ministerio de Transportes y Comunicaciones,
+      dependiente del Despacho Viceministerial de Transportes, que brinda soporte técnico y capacitación a
+      municipalidades provinciales en planificación y gestión de la movilidad urbana.
+    </p>
+    <p>
+      En el marco del fortalecimiento de capacidades dirigidas a las ciudades a nivel nacional,
+      realiza las siguientes capacitaciones:
+    </p>
+  </section>
+
+  <!-- Cursos -->
+
+<section class="full-section">
+  <div class="container">
+    <div class="row align-items-center scroll-reveal">
+      
+<!-- Columna izquierda: cursos -->
+<div class="col-md-6 col-12">
+  <!-- Curso 1 -->
+  <div class="course-card mb-4">
+    <div class="row">
+      <div class="col-md-4 col-12 mb-3 mb-md-0">
+        <img src="Imagen2.png" alt="Curso 1" class="course-img" />
+      </div>
+      <div class="col-md-8 col-12">
+        <h5><strong>Efectos del transporte terrestre en el cambio climático</strong></h5>
+        <p>Curso dirigido a comprender el impacto ambiental del transporte urbano y las estrategias para mitigar sus efectos.</p>
+        <button class="btn btn-registrar me-2">Registrarse</button>
+        <button class="btn btn-ingresar">Ingresar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curso 2 -->
+  <div class="course-card mb-4">
+    <div class="row">
+      <div class="col-md-4 col-12 mb-3 mb-md-0">
+        <img src="Imagen3.png" alt="Curso 2" class="course-img" />
+      </div>
+      <div class="col-md-8 col-12">
+        <h5><strong>Rutas de innovación</strong></h5>
+        <p>Fortalecimiento de empresas del transporte mediante capacitación en gestión, tecnología y sostenibilidad.</p>
+        <button class="btn btn-registrar me-2">Registrarse</button>
+        <button class="btn btn-ingresar">Ingresar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Curso 3 -->
+  <div class="course-card">
+    <div class="row">
+      <div class="col-md-4 col-12 mb-3 mb-md-0">
+        <img src="Imagen4.png" alt="Curso 3" class="course-img" />
+      </div>
+      <div class="col-md-8 col-12">
+        <h5><strong>Protocolo de atención ante actos de acoso en el transporte urbano</strong></h5>
+        <p>Capacitación en el abordaje seguro y respetuoso para el transporte público frente a situaciones de riesgo.</p>
+        <button class="btn btn-registrar me-2">Registrarse</button>
+        <button class="btn btn-ingresar">Ingresar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+      <!-- Columna derecha: slider -->
+      <div class="col-md-6 col-12 mt-4 mt-md-0">
+        <div class="columna-slider-home fadeb_right">
+          <div class="capa"></div>
+          <div class="row m-0">
+<div class="slider-single-column">
+  <ul class="list-unstyled p-0 m-0" id="slider-home">
+    <li><img src="img4.jpg" /></li>
+    <li><img src="img2.jpg" /></li>
+    <li><img src="img1.jpg" /></li>
+    <li><img src="img3.jpg" /></li>
+  </ul>
+</div>
+
+
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer scroll-reveal">
+    <div class="container">
+      <div class="row text-light py-4">
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">PROMOVILIDAD</h6>
+          <p>Programa Nacional de Transporte Urbano Sostenible</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Contacto</h6>
+          <p>Jirón Zorritos 1203, Lima</p>
+          <p>Teléfono: (01) 615-7800</p>
+          <p>Email: info@promovilidad.gob.pe</p>
+        </div>
+        <div class="col-md-4 mb-3">
+          <h6 class="fw-bold">Enlaces de interés</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="footer-link">Portal de Transparencia</a></li>
+            <li><a href="#" class="footer-link">Convocatorias</a></li>
+            <li><a href="#" class="footer-link">Preguntas frecuentes</a></li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-secondary" />
+      <div class="text-center text-light py-2">
+        <small>&copy; 2025 PROMOVILIDAD - Todos los derechos reservados</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll reveal script -->
+  <script>
+    const elements = document.querySelectorAll('.scroll-reveal');
+    const revealOnScroll = () => {
+      const triggerBottom = window.innerHeight * 0.9;
+      elements.forEach(el => {
+        const boxTop = el.getBoundingClientRect().top;
+        if (boxTop < triggerBottom) {
+          el.classList.add('show');
+        } else {
+          el.classList.remove('show');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+  </script>
+
+</body>
+</html>
